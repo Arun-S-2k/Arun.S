@@ -1,0 +1,382 @@
+
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    font-family: 'inter'
+}
+
+
+
+
+/* Initial state for the wrap container */
+.wrap {
+    opacity: 0;
+    transform: translateY(50px); /* Initially moves the content below */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.wrap.show {
+    opacity: 1;
+    transform: translateY(0); /* Moves back to original position smoothly */
+}
+
+/* Initial state for each section */
+nav, .Name-card, .title, .subhead, .Primary-CTA, .social-handle {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Staggered transition effects for each section */
+.wrap.show nav {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+.wrap.show .Name-card {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s; /* No delay for main card */
+}
+
+.wrap.show .title {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.wrap.show .subhead {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.wrap.show .Primary-CTA {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.wrap.show .social-handle {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+/* Initial state for the Experience section */
+.Experience {
+    opacity: 0;
+    transition: opacity 0.3s ease-out; /* Fast fade-in */
+}
+
+/* When the experience section is triggered to show */
+.Experience.show {
+    opacity: 1;
+    transition-delay: 0.5s; /* Delay for experience section to appear after main card */
+}
+
+
+
+
+
+
+
+
+nav {
+    display: flex;
+    padding: 2px 0px;
+    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: var(--Cinder, #232E35);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400; 
+    line-height: normal;
+    position: relative;
+    display: inline-block; 
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+nav ul li a:hover {
+    color: #e99d45;
+    transform: scale(1.1); 
+}
+
+nav ul {
+    list-style: none; 
+    display: flex; 
+    gap: 56px; 
+    margin: 0; 
+    padding: 0; 
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex: 1 0 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.subhead {
+    text-align: center;
+}
+
+.Name-card {
+    text-align: center; 
+    margin: 48px 0; 
+}
+
+.Name-card h1 {
+    font-size: 44px; 
+    margin: 10px 0; 
+    color: #232E35; 
+    font-family: "Plus Jakarta Sans";
+    display: inline; 
+}
+
+.Name-card h1 .dot {
+    color: orange; 
+    margin-left: 2px;
+    font-weight: bold; 
+}
+
+.Name-card p {
+    color: var(--Cinder-Light, #656D72);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+    letter-spacing: 7.5px;
+}
+
+
+
+.Primary-CTA {
+    display: flex;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid var(--Light-2, #F1F1F1);
+    color: var(--Cinder, #232E35);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    will-change: transform;
+}
+
+.Primary-CTA:hover {
+    color: rgb(255, 255, 255); /* Change text color on hover */
+    scale: 1.02;
+    background-color: #232E35;
+    border: 2px solid var(--Light-2, #232E35);
+}
+
+.Primary-CTA:active {
+    box-shadow: 0px 0px 10px #eaeaea; /* Instant glow effect */
+    scale: 0.98;
+}
+
+
+
+
+
+.Experience-container {
+    width: 100%;
+    background: var(--Light-1, #FBFBFB); /* Full width background */
+}
+
+.Experience {
+    display: flex;
+    width: 100%; /* Full width within the container */
+    max-width: 1438px; /* Optional: Limit max width for the content */
+    padding: 40px 120px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 44px;
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.experience-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.experience-title h3,
+.experience-title p,
+.experience-title h1 {
+    margin: 0; /* Remove extra margins */
+}
+
+.years-in-number img,
+.experience-title img {
+    margin-left: 10px; /* Adjust the spacing between the text and images */
+}
+
+
+
+
+
+
+
+
+
+
+.years-in-number {
+    color: var(--Cinder, #232E35);
+    font-family: "Plus Jakarta Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+
+
+
+.companies div {
+    display: flex;
+    width: 281px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.companies button {
+    display: flex;
+    padding: 14px 32px 14px 8px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 4px;
+    background: var(--White, #FFF);
+    border: none;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: relative; /* To position the arrow inside */
+    box-sizing: border-box; /* Ensures padding doesn't cause size change */
+    height: 52px;
+}
+
+.companies button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.companies button:active {
+    background-color: #e0e0e0;
+    color: #E76F00;
+    box-shadow: 0px 0px 10px #eaeaea; /* Optional: if you want a glow effect */
+    /* No padding change needed here to prevent size shift */
+}
+
+.companies button .arrow {
+    display: none; /* Initially hide the arrow */
+    width: 24px; /* Adjust size of the arrow */
+    height: 24px;
+}
+
+.companies button:active .arrow {
+    display: inline-block; /* Show the arrow only when the button is active */
+    margin-left: 10px; /* Add space between the text and the arrow */
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 989px) and (min-width: 426px) {
+    body {
+        padding: 40px 60px;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+    .Name-card h1 {
+        font-size: 36px;
+    }
+
+    .Name-card p {
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+    nav {
+        display: none; /* Hide the navigation */
+    }
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        display: flex;
+        width: 360px;
+        height: 1018px;
+        padding: 58px 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .Name-card h1 {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .Name-card p {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+    nav {
+        display: none; /* Hide the navigation */
+    }
+}
+
+
+
