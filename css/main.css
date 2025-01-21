@@ -279,26 +279,6 @@ main {
 
 
 
-.companies {
-    display: flex;
-    flex-direction: row; /* Stack .buttons and .designations vertically */
-    justify-content: space-between;
-}
-
-.companies .buttons {
-    display: flex;
-    flex-direction: column; /* Align buttons in a row */
-    gap: 12px; /* Space between buttons */
-}
-
-.companies .designations {
-    display: flex;
-    flex-direction: column; /* Align designation details in a row */
-    line-height: 5%;
-    text-align: left;
-    gap: 16px;
-}
-
 .tools {
     display: flex;
     gap: 10px; /* Space between individual tools */
@@ -343,7 +323,7 @@ main {
 .discription p {
     display: flex; /* Align the image and text in a row */
     align-items: center; /* Vertically align the image and text */
-    gap: 10px; /* Space between the image and text */
+    gap: 8px; /* Space between the image and text */
     margin: 0%
 }
 
@@ -353,15 +333,50 @@ main {
 
 
 
+.designations h2 {
+    margin-bottom: 8px; /* Space between the title and next section */
+}
 
+.designations p {
+    margin-bottom: 8px; /* Space between paragraphs */
+}
+
+.designations .discription {
+    margin-top: 8px; /* Space before the description starts */
+}
+
+.designations .discription p {
+    margin-bottom: 0px;
+}
+
+.designations .tools {
+    margin-top: 16px;
+}
+
+.companies {
+    display: flex;
+    flex-direction: row; /* Stack .buttons and .designations vertically */
+    justify-content: space-between;
+}
+
+.companies .buttons {
+    display: flex;
+    flex-direction: column; /* Align buttons in a row */
+    gap: 12px; /* Space between buttons */
+}
+
+.companies .designations {
+    display: flex;
+    flex-direction: column; /* Align designation details in a row */
+    line-height: 2%;
+    text-align: left;
+    gap: 6px;
+}
 
 .companies button {
     display: flex;
-    padding: 14px 32px 14px 8px;
     justify-content: space-between;
-    
     align-items: center;
-    align-self: stretch;
     background: var(--White, #FBFBFB);
     border: none;
     font-family: Inter;
@@ -370,8 +385,8 @@ main {
     font-weight: 500;
     line-height: normal;
     position: relative; /* To position the arrow inside */
-    box-sizing: border-box; /* Ensures padding doesn't cause size change */
     height: 52px;
+    width: 281px;
 }
 
 .companies button:hover {
@@ -392,7 +407,7 @@ main {
 
 .companies button:active .arrow {
     display: inline-block; /* Show the arrow only when the button is active */
-    margin-left: 10px; /* Add space between the text and the arrow */
+    padding-left: 16px;
 }
 
 
@@ -460,13 +475,66 @@ main {
         display: none; /* Hide the navigation */
     }
 
+
+
+    
+    .companies {
+        display: flex;
+        flex-direction: column; /* Stack .buttons and .designations vertically */
+        align-items: center; /* Center align content */
+        width: 100%; /* Make sure the container takes full width */
+        gap: 24px;
+    }
+    
     .companies .buttons {
-        flex-direction: row;
+        display: flex;
+        flex-direction: row; /* Align buttons horizontally */
+        justify-content: space-between; /* Distribute buttons evenly across the screen */
+        width: 100%; /* Ensure buttons take full width of the container */
+        gap: 0; /* No gap between buttons */
+        padding: 0; /* No padding */
+        align-items: center;
+    }
+    
+    .companies button {
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
     }
 
-    .companies {
-        flex-direction: column;
+    .companies button:active {
+        background-color: #ffffff;
+        color: #E76F00;
+        border-bottom: 1px solid #E76F00;
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
     }
+    
+    .companies button .arrow {
+        display: none !important; /* Completely remove the arrow in mobile */
+    }
+    
+    .companies .designations {
+        gap: 16px;
+    }
+
+    .designations h2 {
+        margin-bottom: 12px; /* Space between the title and next section */
+    }
+    
+    .designations p {
+        margin-bottom: 8px; /* Space between paragraphs */
+    }
+    
+    .designations .discription {
+        margin-top: 20px; /* Space before the description starts */
+    }
+    
+    .designations .discription p {
+        margin-bottom: 16px; /* Space between each description item */
+    }
+    
 
     .Experience-container {
         padding: 40px 16px;
