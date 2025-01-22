@@ -1,0 +1,29 @@
+{
+    "company1": {
+      "title": "Senior UI UX Designer",
+      "location": "Chennai, INDIA",
+      "period": "Apr 2023 - Present · Full-time",
+      "tools": ["Figma", "Adobe"],
+      "description": [
+        "Developed a telematics website with real-time data visualization for VCUs and BMS.",
+        "Built a service center app for tracking after-sales service records.",
+        "Designed mobile apps for electric vehicle battery swap station management.",
+        "Redesigned an ERP platform for inventory, CRM, and sales chain operations.",
+        "Created a customer mobile app for vehicle performance monitoring and management.",
+        "Designed screens for vehicle instrument clusters to enhance user interface and experience."
+      ]
+    },
+    "company2": {
+      "title": "UI UX Designer",
+      "location": "Bangalore, INDIA",
+      "period": "Jan 2021 - Mar 2023 · Full-time",
+      "tools": ["Photoshop", "InVision"],
+      "description": [
+        "Worked on a fleet management system for logistics companies.",
+        "Designed a user-friendly dashboard for an AI-powered chatbot.",
+        "Redesigned an ERP platform for inventory, CRM, and sales chain operations.",
+        "Optimized UX flows for mobile banking applications."
+      ]
+    }
+  }
+  

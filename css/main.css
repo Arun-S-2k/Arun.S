@@ -5,6 +5,7 @@ body {
     align-items: center;
     gap: 20px;
     font-family: 'inter'
+    
 }
 
 .wrap {
@@ -16,17 +17,18 @@ body {
 }
 
 
-
 /* Initial state for the wrap container */
 .wrap {
     opacity: 0;
-    transform: translateY(50px); /* Initially moves the content below */
+    transform: translateY(0); /* Ensure no initial movement */
+    visibility: hidden; /* Ensure the content doesn't affect layout initially */
     transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
 }
 
 .wrap.show {
     opacity: 1;
-    transform: translateY(0); /* Moves back to original position smoothly */
+    visibility: visible; /* Reveal content smoothly without shifting */
+    transform: translateY(0);
 }
 
 /* Initial state for each section */
@@ -221,6 +223,7 @@ main {
     display: flex;  /* Make it a flex container */
     flex-direction: column; /* Arrange items vertically */
     width: 100vw;
+    height: 640px;
     max-width: 100vw;
     background: var(--Light-1, #FBFBFB);
     padding: 40px 300px;
@@ -408,6 +411,15 @@ main {
 .companies button.active .arrow {
     display: inline-block;
 }
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;  /* Keeps the navbar on top */
+}
+
 
 
 
