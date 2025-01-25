@@ -32,7 +32,7 @@ body {
 }
 
 /* Initial state for each section */
-nav, .Name-card, .title, .subhead, .Primary-CTA, .social-handle {
+nav, .Name-card, .title-top, .subhead, .Primary-CTA, .social-handle {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
@@ -51,7 +51,7 @@ nav, .Name-card, .title, .subhead, .Primary-CTA, .social-handle {
     transition-delay: 0s; /* No delay for main card */
 }
 
-.wrap.show .title {
+.wrap.show .title-top {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.2s;
@@ -140,7 +140,7 @@ main {
     flex: 1 0 0;
 }
 
-.title {
+.title-top {
     text-align: center;
 }
 
@@ -230,6 +230,7 @@ main {
     box-sizing: border-box;
     overflow-x: hidden;
     gap: 44px; /* Now gap will work */
+    overflow: visible 
 }
 
 
@@ -241,7 +242,7 @@ main {
     gap: 44px;
 }
 
-.experience-title {
+.title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -249,14 +250,14 @@ main {
     align-self: stretch;
 }
 
-.experience-title h3,
-.experience-title p,
-.experience-title h1 {
+.title h3,
+.title p,
+.title h1 {
     margin: 0; /* Remove extra margins */
 }
 
 .years-in-number img,
-.experience-title img {
+.title img {
     margin-left: 10px; /* Adjust the spacing between the text and images */
 }
 
@@ -420,7 +421,42 @@ nav {
     z-index: 9999;  /* Keeps the navbar on top */
 }
 
+.path {
+    color: var(--Cinder-Light, #656D72);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 200% */
+    letter-spacing: 7.5px;
+    display: flex;
+    align-items: center;
+}
 
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.educations {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    gap: 20px;
+}
+
+/* The class for individual college divs */
+.college {
+    display: flex;
+    flex-direction: column;  /* Stack the elements inside the college div */
+    gap: 2px;  /* Apply space between elements inside each .college div */
+}
+
+/* Optional: Remove margin and padding for all children inside .educations */
+.educations * {
+    margin: 0;
+    padding: 0;
+}
 
 
 

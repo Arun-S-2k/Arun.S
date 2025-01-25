@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Reset scroll position to the top of the page
-    window.scrollTo(0, 0);
-
-    // Lock scroll during animations
-    document.body.classList.add('lock-scroll');
-
     // Initialize animations and company buttons
     initAnimations();
     initCompanyButtons();
@@ -20,11 +14,6 @@ function initAnimations() {
     setTimeout(() => {
         document.querySelector('.Experience').classList.add('show');
     }, 10);
-
-    // Unlock scroll after animation duration
-    setTimeout(() => {
-        document.body.classList.remove('lock-scroll');
-    }, 1200);  // Set this duration according to your animation duration
 }
 
 // Function to handle company buttons
