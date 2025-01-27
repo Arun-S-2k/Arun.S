@@ -438,7 +438,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    padding: 20px;
+    padding: 40px 300px;
 }
 
 .educations {
@@ -452,6 +452,7 @@ nav {
     display: flex;
     flex-direction: column;  /* Stack the elements inside the college div */
     gap: 2px;  /* Apply space between elements inside each .college div */
+    width: 360px;
 }
 
 /* Optional: Remove margin and padding for all children inside .educations */
@@ -459,6 +460,36 @@ nav {
     margin: 0;
     padding: 0;
 }
+
+.education-skills {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.education-text p {
+    padding: 0;
+    margin: 0;
+}
+
+.skill {
+    margin-bottom: 16px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background-color: #8a4bff; /* Purple color */
+    border-radius: 5px;
+}
+
 
 
 
@@ -591,5 +622,10 @@ nav {
     .Experience-container {
         padding: 40px 16px;
         gap: 24px;
+    }
+
+    .education-skills {
+        display: flex;
+        flex-direction: column;
     }
 }
