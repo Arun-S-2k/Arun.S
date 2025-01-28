@@ -14,15 +14,13 @@
       ]
     },
     "company2": {
-      "title": "UI UX Designer",
-      "location": "Bangalore, INDIA",
-      "period": "Jan 2021 - Mar 2023 · Full-time",
-      "tools": ["Photoshop", "InVision"],
+      "title": "Junior UI UX Designer",
+      "location": "Chennai, INDIA",
+      "period": "Aug 2022 - Mar 2023 · Full-time",
+      "tools": ["Figma", "Adobe"],
       "description": [
-        "Worked on a fleet management system for logistics companies.",
-        "Designed a user-friendly dashboard for an AI-powered chatbot.",
-        "Redesigned an ERP platform for inventory, CRM, and sales chain operations.",
-        "Optimized UX flows for mobile banking applications."
+        "Designed a fintech product with multiple payment flows, integrating 20+ BBPS services, UPI, ad-hoc payments, recurring payments, and an autopay system during its emerging phase.",
+        "Handled the entire design process—from conceptualization and user research to information architecture, wireframing, prototyping, and crafting intuitive, visually appealing user interfaces for both mobile and web."
       ]
     }
   }

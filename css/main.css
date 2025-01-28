@@ -229,7 +229,7 @@ main {
     box-sizing: border-box;
     overflow-x: hidden;
     gap: 44px; /* Now gap will work */
-    overflow: visible 
+    overflow: visible;
 }
 
 
@@ -246,9 +246,9 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    align-self: stretch;
     min-width: 320px;
 }
+
 
 .title h3,
 .title p,
@@ -360,7 +360,7 @@ main {
 .companies {
     display: flex;
     flex-direction: row; /* Stack .buttons and .designations vertically */
-    gap: 120px;
+    gap: 240px;
 }
 
 .companies .buttons {
@@ -392,6 +392,7 @@ main {
     position: relative; /* To position the arrow inside */
     height: 52px;
     width: 281px;
+    cursor: pointer;
 }
 
 .companies button:hover {
@@ -444,18 +445,43 @@ nav {
 .educations {
     display: flex;
     flex-direction: column;  /* Stack items vertically */
-    gap: 20px;
+    gap: 36px;
 }
 
-/* The class for individual college divs */
 .college {
     display: flex;
     flex-direction: column;  /* Stack the elements inside the college div */
     gap: 2px;  /* Apply space between elements inside each .college div */
-    width: 360px;
+    width: 480px;
 }
 
-/* Optional: Remove margin and padding for all children inside .educations */
+.college p {
+    color: var(--Cinder-Light, #656D72);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.college h4 {
+    color: var(--Cinder, green);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 00;
+    line-height: normal;
+}
+
+.college h3 {
+    color: var(--Cinder, #232E35);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
 .educations * {
     margin: 0;
     padding: 0;
@@ -472,22 +498,42 @@ nav {
     margin: 0;
 }
 
-.skill {
-    margin-bottom: 16px;
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.progress-bar {
-    width: 100%;
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+} 
+
+.skill-progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.skill-logo {
+    width: 32px; /* Adjust logo size */
+    height: 32px;
+}
+
+.progress-container {
+    width: 300px; /* Fixed width */
     height: 8px;
     background-color: #eee;
-    border-radius: 5px;
+    border-radius: 4px;
     overflow: hidden;
 }
 
-.fill {
+.progress-bar {
     height: 100%;
-    background-color: #8a4bff; /* Purple color */
-    border-radius: 5px;
+    background-color: #E76F00;
+    border-radius: 4px;
 }
 
 
@@ -559,6 +605,11 @@ nav {
         display: none; /* Hide the navigation */
     }
 
+    .title-top .desigination {
+        font-size: 28px;
+    }
+
+
 
 
     
@@ -628,4 +679,19 @@ nav {
         display: flex;
         flex-direction: column;
     }
+
+    .education-container {
+        padding: 40px 16px;
+    }
+
+    .college {
+        width: 100%;
+    }
+
+    .skill-progress {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
 }
