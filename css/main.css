@@ -571,8 +571,14 @@ nav {
         gap: 40px;
     }
 
+    .Primary-CTA:active {
+        box-shadow: none !important; /* Removes persistent shadow */
+        transform: none !important; /* Keeps the button at its normal size after clicking */
+    }
+
     
 }
+
 
 @media screen and (max-width: 425px) {
     body {
@@ -609,6 +615,11 @@ nav {
 
     .title-top .desigination {
         font-size: 28px;
+    }
+
+    .Primary-CTA:active {
+        box-shadow: none !important; /* Removes persistent shadow */
+        transform: none !important; /* Keeps the button at its normal size after clicking */
     }
 
 
