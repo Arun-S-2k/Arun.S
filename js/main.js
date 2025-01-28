@@ -76,3 +76,19 @@ function updateDesignation(company) {
         </div>
     `;
 }
+
+const btn = document.querySelector(".Primary-CTA");
+
+if (btn) {
+    btn.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevents page jump
+
+        if (window.innerWidth <= 425) { // Mobile only
+            setTimeout(() => {
+                this.classList.remove("active"); // Removes active state after click
+            }, 200);
+        }
+    });
+}
+
+

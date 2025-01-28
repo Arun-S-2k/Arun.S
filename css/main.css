@@ -570,6 +570,8 @@ nav {
     .companies {
         gap: 40px;
     }
+
+    
 }
 
 @media screen and (max-width: 425px) {
