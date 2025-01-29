@@ -40,6 +40,21 @@ function initCompanyButtons() {
     });
 }
 
+const slider = document.querySelector(".portfolio-slider");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const itemWidth = document.querySelector(".portfolio-item").offsetWidth + 40; // Card width + gap (considering gap of 40px)
+const visibleCards = 3; // Number of visible cards at a time
+
+nextBtn.addEventListener("click", () => {
+    slider.scrollBy({ left: itemWidth * visibleCards, behavior: "smooth" });
+});
+
+prevBtn.addEventListener("click", () => {
+    slider.scrollBy({ left: -itemWidth * visibleCards, behavior: "smooth" });
+});
+
+
 // Function to load designation data
 function loadDesignationData() {
     fetch("content.json")
@@ -90,5 +105,3 @@ if (btn) {
         }
     });
 }
-
-

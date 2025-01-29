@@ -262,6 +262,105 @@ main {
 }
 
 
+.portfolio-section {
+    text-align: center;
+    padding: 40px 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.portfolio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Prevents extra scroll */
+}
+
+.portfolio-slider {
+    display: flex;
+    gap: 40px;
+    padding: 30px 30px;
+    overflow-x: scroll; /* Allow horizontal scroll */
+    scroll-behavior: smooth;
+    width: 100%;
+    flex-wrap: nowrap; /* Prevent wrapping of the items */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.portfolio-slider::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+
+.portfolio-item {
+    flex: 0 0 calc(33.33% - 20px); /* 3 items per row */
+    max-width: 320px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: left;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+.portfolio-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #F1F1F1;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #232E35;
+    font-weight: 500;
+}
+
+.link-icon {
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.nav-btn {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: none;
+    background: var(--Purple-Lighter, #EAE6FE);
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.prev-btn {
+    left: -40px;
+}
+
+.next-btn {
+    right: -40px;
+}
 
 
 
@@ -496,6 +595,8 @@ nav {
 .education-text p {
     padding: 0;
     margin: 0;
+    display: flex;
+    width: 100%; /* Makes the <p> element take the full width of its parent */
 }
 
 .skills {
@@ -523,7 +624,7 @@ nav {
 }
 
 .progress-container {
-    width: 300px; /* Fixed width */
+    width: 280px; /* Fixed width */
     height: 8px;
     background-color: #eee;
     border-radius: 4px;
@@ -535,6 +636,7 @@ nav {
     background-color: #E76F00;
     border-radius: 4px;
 }
+
 
 
 
@@ -623,8 +725,6 @@ nav {
     }
 
 
-
-
     
     .companies {
         display: flex;
@@ -695,6 +795,13 @@ nav {
 
     .education-container {
         padding: 40px 16px;
+    }
+
+    .education-text p {
+        display: block; /* Change flex to block to fill container naturally */
+        width: 100%; /* Ensures the element takes up full width of its container */
+        max-width: 370px;
+        margin: 0; /* Reset any default margins if necessary */
     }
 
     .college {
