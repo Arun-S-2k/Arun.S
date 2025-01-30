@@ -43,16 +43,28 @@ function initCompanyButtons() {
 const slider = document.querySelector(".portfolio-slider");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
-const itemWidth = document.querySelector(".portfolio-item").offsetWidth + 40; // Card width + gap (considering gap of 40px)
-const visibleCards = 3; // Number of visible cards at a time
 
-nextBtn.addEventListener("click", () => {
-    slider.scrollBy({ left: itemWidth * visibleCards, behavior: "smooth" });
-});
+// Function to update scroll behavior based on screen size
+function updateScrollBehavior() {
+    const isMobile = window.matchMedia("(max-width: 425px)").matches;
+    const visibleCards = isMobile ? 2 : 3; // 2 for mobile, 3 for web
+    const itemWidth = document.querySelector(".portfolio-item").offsetWidth + 10; // Adjust for gap
 
-prevBtn.addEventListener("click", () => {
-    slider.scrollBy({ left: -itemWidth * visibleCards, behavior: "smooth" });
-});
+    nextBtn.onclick = () => {
+        slider.scrollBy({ left: itemWidth * visibleCards, behavior: "smooth" });
+    };
+
+    prevBtn.onclick = () => {
+        slider.scrollBy({ left: -itemWidth * visibleCards, behavior: "smooth" });
+    };
+}
+
+// Run function initially
+updateScrollBehavior();
+
+// Update on window resize
+window.addEventListener("resize", updateScrollBehavior);
+
 
 
 // Function to load designation data
