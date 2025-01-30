@@ -40,6 +40,12 @@ function initCompanyButtons() {
     });
 }
 
+
+
+
+
+
+
 const slider = document.querySelector(".portfolio-slider");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
@@ -47,9 +53,10 @@ const nextBtn = document.querySelector(".next-btn");
 // Function to update scroll behavior based on screen size
 function updateScrollBehavior() {
     const isMobile = window.matchMedia("(max-width: 425px)").matches;
-    const visibleCards = isMobile ? 2 : 3; // 2 for mobile, 3 for web
+    const visibleCards = 1; // Always move 1 card at a time (on both mobile and web)
     const itemWidth = document.querySelector(".portfolio-item").offsetWidth + 10; // Adjust for gap
 
+    // Move 1 card at a time
     nextBtn.onclick = () => {
         slider.scrollBy({ left: itemWidth * visibleCards, behavior: "smooth" });
     };
@@ -64,6 +71,12 @@ updateScrollBehavior();
 
 // Update on window resize
 window.addEventListener("resize", updateScrollBehavior);
+
+
+
+
+
+
 
 
 

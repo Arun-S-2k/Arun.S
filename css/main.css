@@ -296,13 +296,6 @@ main {
     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
 }
 
-.portfolio-nav {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: flex-end;
-    padding: 20px 20px;
-}
 
 .portfolio-slider::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and Opera */
@@ -337,7 +330,7 @@ main {
 
 .portfolio-item h4 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     margin: 10px 0;
 }
 
@@ -356,6 +349,15 @@ main {
     font-size: 16px;
     margin-left: 8px;
 }
+
+.portfolio-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-end;
+    padding: 20px 20px;
+}
+
 
 .nav-btn {
     display: flex;
@@ -711,8 +713,11 @@ nav {
         gap: 32px;
         font-family: 'Inter', sans-serif;
         width: 100%; /* Remove fixed width, use full available width */
-        padding: 40px 16px;
         height: 100%; /* Adjust body height to be responsive */
+    }
+
+    main {
+        padding: 16px;
     }
 
     nav ul {
@@ -762,10 +767,18 @@ nav {
         max-width: 400px;
     }
 
+    .portfolio-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-end;
+        padding: 20px 20px;
+    }
+
     .portfolio-container {
         display: flex;
         align-items: center;
-        justify-content: flex-start; /* Align the items to the left */
+        justify-content: center; /* Align the items to the left */
         position: relative;
         width: 100%; /* Ensure it fills the container */
         overflow: hidden; /* Prevent extra scroll */
@@ -790,19 +803,13 @@ nav {
     .portfolio-item {
         flex: 0 0 calc(50% - 10px); /* 2 items per row on mobile */
         max-width: 45%; /* Ensure each item is sized correctly */
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        padding: 16px;
-        text-align: left;
         transition: transform 0.3s ease;
     }
 
     .portfolio-item img {
+        border-radius: 8px 8px 0px 0px;
         width: 100%;
         height: auto;
-        border-radius: 8px;
-        opacity: 0.8;
     }
 
     .portfolio-item h4 {
@@ -816,6 +823,14 @@ nav {
     .link-icon {
         font-size: 14px;
     }
+    
+    .portfolio-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-end;
+        padding: 20px 20px;
+    }
 
     .nav-btn {
         position: absolute;
@@ -823,8 +838,8 @@ nav {
         background: var(--Purple-Lighter, #EAE6FE);
         border-radius: 16px;
         cursor: pointer;
-        width: 35px;
-        height: 35px;
+        width: 28px;
+        height: 28px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -832,11 +847,11 @@ nav {
     }
 
     .prev-btn {
-        left: 10px;
+        left: 8px;
     }
 
     .next-btn {
-        right: 10px;
+        right: 8px;
     }
 
     .nav-btn:hover {
