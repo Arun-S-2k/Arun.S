@@ -249,6 +249,9 @@ main {
     min-width: 320px;
 }
 
+.title h1 {
+    font-size: 32px;
+}
 
 .title h3,
 .title p,
@@ -278,6 +281,7 @@ main {
 .portfolio-container {
     display: flex;
     flex-direction: column;
+    gap: 40px;
     align-items: flex-start;
     justify-content: center;
     position: relative;
@@ -287,13 +291,13 @@ main {
 
 .portfolio-slider {
     display: flex;
-    gap: 40px;
-    padding: 30px 30px;
+    gap: 120px;
     overflow-x: scroll; /* Allow horizontal scroll */
     scroll-behavior: smooth;
     width: 100%;
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    cursor: grab;
 }
 
 
@@ -310,6 +314,11 @@ main {
     text-align: left;
     transition: transform 0.3s ease; /* Smooth hover effect */
 }
+
+.portfolio-item img[src*="Work in progress.png"] {
+    opacity: 0.8; /* Adjust as needed */
+}
+
 
 .item-bottom {
 
@@ -355,7 +364,7 @@ main {
     flex-direction: row;
     gap: 20px;
     align-items: flex-end;
-    padding: 20px 20px;
+    display: none;
 }
 
 
@@ -369,20 +378,27 @@ main {
     flex-shrink: 0;
     border-radius: 16px;
     border: none;
-    background: var(--Purple-Lighter, #EAE6FE);
+    background: #fdf9ee;
     cursor: pointer;
 }
 
 .nav-btn:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(213, 194, 149, 0.2);
 }
 
 .prev-btn {
-    left: -40px;
+    left: 40px;
+    color: #E76F00;
 }
 
 .next-btn {
-    right: -40px;
+    right: 40px;
+    color: #E76F00;
+}
+
+
+.portfolio-slider.dragging {
+    cursor: grabbing;
 }
 
 
@@ -786,8 +802,7 @@ nav {
 
     .portfolio-slider {
         display: flex;
-        gap: 10px; /* Reduced gap for mobile view */
-        padding: 12px 12px; /* Adjust padding for mobile */
+        gap: 30px; /* Reduced gap for mobile view */
         overflow-x: auto; /* Allow horizontal scrolling */
         scroll-behavior: smooth;
         width: 100%;
@@ -802,7 +817,7 @@ nav {
 
     .portfolio-item {
         flex: 0 0 calc(50% - 10px); /* 2 items per row on mobile */
-        max-width: 45%; /* Ensure each item is sized correctly */
+        max-width: 75%; /* Ensure each item is sized correctly */
         transition: transform 0.3s ease;
     }
 
@@ -825,38 +840,9 @@ nav {
     }
     
     .portfolio-nav {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        align-items: flex-end;
-        padding: 20px 20px;
+        display: none
     }
 
-    .nav-btn {
-        position: absolute;
-        top: 10px; /* Align buttons to the top */
-        background: var(--Purple-Lighter, #EAE6FE);
-        border-radius: 16px;
-        cursor: pointer;
-        width: 28px;
-        height: 28px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-    }
-
-    .prev-btn {
-        left: 8px;
-    }
-
-    .next-btn {
-        right: 8px;
-    }
-
-    .nav-btn:hover {
-        background: rgba(0, 0, 0, 0.2);
-    }
 
 
 

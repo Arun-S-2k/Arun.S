@@ -53,10 +53,10 @@ const nextBtn = document.querySelector(".next-btn");
 // Function to update scroll behavior based on screen size
 function updateScrollBehavior() {
     const isMobile = window.matchMedia("(max-width: 425px)").matches;
-    const visibleCards = 1; // Always move 1 card at a time (on both mobile and web)
+    const visibleCards = 6; // Always move 6 cards at a time (on both mobile and web)
     const itemWidth = document.querySelector(".portfolio-item").offsetWidth + 10; // Adjust for gap
 
-    // Move 1 card at a time
+    // Move cards when nav buttons are clicked
     nextBtn.onclick = () => {
         slider.scrollBy({ left: itemWidth * visibleCards, behavior: "smooth" });
     };
@@ -71,6 +71,39 @@ updateScrollBehavior();
 
 // Update on window resize
 window.addEventListener("resize", updateScrollBehavior);
+
+// ------ DRAG FUNCTIONALITY (Added Below) ------
+let isDragging = false;
+let startX, scrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    slider.classList.add("dragging"); // Optional: Add visual effect
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseleave", () => {
+    isDragging = false;
+    slider.classList.remove("dragging");
+});
+
+slider.addEventListener("mouseup", () => {
+    isDragging = false;
+    slider.classList.remove("dragging");
+});
+
+slider.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust drag speed
+    slider.scrollLeft = scrollLeft - walk;
+});
+
+// Prevent text selection while dragging
+slider.style.userSelect = "none";
+
 
 
 
