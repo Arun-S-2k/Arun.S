@@ -1,7 +1,9 @@
 
 body {
     display: flex;
+    width: 100%;
     flex-direction: column;
+    padding-bottom: 300px;
     align-items: center;
     gap: 20px;
     font-family: 'inter'
@@ -138,6 +140,7 @@ main {
     align-items: center;
     gap: 24px;
     flex: 1 0 0;
+    padding: 80px 0px 0px 0px;
 }
 
 .title-top {
@@ -272,16 +275,18 @@ main {
 
 .portfolio-section {
     text-align: center;
-    padding: 40px 300px;
+    padding: 40px 300px; /* Left and right padding */
     display: flex;
     flex-direction: column;
     gap: 36px;
+    width: 100%; /* Ensure it fills the container width */
+    min-height: 100%; /* Ensure it doesn't collapse vertically */
+    box-sizing: border-box; /* Include padding in width and height calculation */
 }
 
 .portfolio-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
     align-items: flex-start;
     justify-content: center;
     position: relative;
@@ -291,7 +296,7 @@ main {
 
 .portfolio-slider {
     display: flex;
-    gap: 120px;
+    justify-content: space-between;
     overflow-x: scroll; /* Allow horizontal scroll */
     scroll-behavior: smooth;
     width: 100%;
@@ -301,22 +306,30 @@ main {
 }
 
 
+
+
 .portfolio-slider::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and Opera */
 }
 
 
 .portfolio-item {
+
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Keep text color */
+    display: block; /* Make sure it behaves like a block */
     flex: 0 0 calc(33.33% - 20px); /* 3 items per row */
-    max-width: 320px;
+    max-width: 348px;
+    max-height: 402px;
     background: white;
     border-radius: 8px 8px 0px 0px;
     text-align: left;
     transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
-.portfolio-item img[src*="Work in progress.png"] {
-    opacity: 0.8; /* Adjust as needed */
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 
@@ -334,7 +347,6 @@ main {
     width: 100%;
     height: auto;
     border-radius: 8px 8px 0px 0px;
-    opacity: 0.8;
 }
 
 .portfolio-item h4 {
@@ -397,18 +409,40 @@ main {
 }
 
 
-.portfolio-slider.dragging {
-    cursor: grabbing;
+
+
+
+
+
+
+.education-alter {
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+
+
+.site-developed img {
+    width: 30px; /* Adjust the size of the ChatGPT logo */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align the image with the text */
+    margin-left: 5px; /* Optional: Adds a little space between the text and the logo */
+}
+
+.site-developed {
+    min-width: 500px;
+}
+
+.Coding-skill {
+    align-items: center; /* Vertically align the items */
+    gap: 16px; /* Add space between images and text */
 }
 
 
 
 
 
-
-
-
-.years-in-number {
+.other-skills .years-in-number {
     color: var(--Cinder, #232E35);
     font-family: "Plus Jakarta Sans";
     font-size: 24px;
@@ -583,7 +617,8 @@ nav {
 .educations {
     display: flex;
     flex-direction: column;  /* Stack items vertically */
-    gap: 36px;
+    justify-content: space-between;
+    padding: 20px 0px 20px 0px;
 }
 
 .college {
@@ -654,6 +689,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 32px;
 }
 
 
@@ -811,19 +847,29 @@ nav {
         -ms-overflow-style: none;
     }
 
+    .portfolio-slider.dragging {
+        cursor: grabbing;
+    }
+
     .portfolio-slider::-webkit-scrollbar {
         display: none; /* Hide the scrollbar */
     }
 
     .portfolio-item {
         flex: 0 0 calc(50% - 10px); /* 2 items per row on mobile */
-        max-width: 75%; /* Ensure each item is sized correctly */
+        max-width: 85%; /* Ensure each item is sized correctly */
+        transition: transform 0.3s ease;
+    }
+
+    .portfolio-link {
+        flex: 0 0 calc(50% - 10px); /* 2 items per row on mobile */
+        max-width: 85%; /* Ensure each item is sized correctly */
         transition: transform 0.3s ease;
     }
 
     .portfolio-item img {
         border-radius: 8px 8px 0px 0px;
-        width: 100%;
+        width: 175px;
         height: auto;
     }
 
@@ -841,6 +887,16 @@ nav {
     
     .portfolio-nav {
         display: none
+    }
+
+
+
+
+
+
+
+    .site-developed {
+        min-width: 200px;
     }
 
 
