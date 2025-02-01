@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 80px;
     margin-bottom: 80px;
 }
 
@@ -217,6 +217,22 @@ main {
     flex-direction: row;
     gap: 32px;
 }
+
+
+
+
+
+.approach {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.approach-logo img {
+    width: 1000px;
+}
+
+
+
 
 
 
@@ -802,6 +818,19 @@ nav {
         box-shadow: none !important; /* Removes persistent shadow */
         transform: none !important; /* Keeps the button at its normal size after clicking */
     }
+
+
+
+
+    .approach {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .approach-logo img {
+        width: 380px;
+    }
+    
 
 
 
