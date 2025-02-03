@@ -5,6 +5,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    overflow-x: hidden;
     font-family: 'inter'
     
 }
@@ -96,7 +97,7 @@ nav, .Name-card, .title-top, .subhead, .Primary-CTA, .social-handle {
 
 
 nav {
-    display: flex;
+    display: none;
     padding: 2px 0px;
     margin-top: 16px;
     justify-content: center;
@@ -146,9 +147,20 @@ main {
     text-align: center;
 }
 
+
+
 .subhead {
     text-align: center;
+    font-size: 16px; /* Default size for the paragraph */
+    color: #232E35; /* Default color */
 }
+
+.highlight, .tech-experience {
+    font-weight: bold;
+    color: #232E35; /* Default color */
+    font-size: 18px; /* Larger size */
+}
+
 
 .Name-card {
     text-align: center; 
@@ -211,12 +223,65 @@ main {
     scale: 0.98;
 }
 
+
+
+
+.primary-CTA {
+    display: inline-block; /* Changed from flex to inline-block */
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid var(--Light-2, #F1F1F1);
+    color: var(--Cinder, #232E35);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    will-change: transform;
+}
+
+.primary-CTA:hover {
+    color: rgb(255, 255, 255); /* Change text color on hover */
+    transform: scale(1.02); /* Use transform instead of scale */
+    background-color: #232E35;
+    border: 2px solid var(--Light-2, #232E35);
+}
+
+.primary-CTA:active {
+    box-shadow: 0px 0px 10px #eaeaea; /* Instant glow effect */
+    transform: scale(0.98); /* Use transform for scaling */
+}
+
+
+
+
+
 .social-handle {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 24px;
+    opacity: 60%;
 }
 
+.social-handle img {
+    width: 30px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: all 0.3s ease; /* Optional: Add smooth transition for size change */
+}
+
+.social-handle a:hover img {
+    transform: scale(1.1); 
+}
+
+.social-bottom img {
+    width: 30px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: all 0.3s ease; /* Optional: Add smooth transition for size change */
+}
 
 
 
@@ -447,11 +512,13 @@ main {
 
 .site-developed {
     min-width: 500px;
+    opacity: 80%;
 }
 
 .site-developed p {
     padding: 0%;
     margin-top: 8px;
+    color: #E76F00;
 }
 
 .Coding-skill {
@@ -690,7 +757,7 @@ nav {
 .education-skills {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 100px;
 }
 
 .education-text p {
@@ -733,7 +800,7 @@ nav {
 }
 
 .progress-container {
-    width: 280px; /* Fixed width */
+    width: 400px; /* Fixed width */
     height: 8px;
     background-color: #eee;
     border-radius: 4px;
@@ -774,6 +841,7 @@ nav {
     gap: 8px;
     color: #656D72;
     font-size: 20px;
+    font-weight: 500;
 }
 
 .mail-logo {
@@ -834,6 +902,19 @@ nav {
         padding: 24px;
     }
 
+    .portfolio-section {
+        width: 100%;
+    }
+
+    .portfolio-item h4 {
+        font-size: 16px;
+    }
+
+    .progress-container {
+        width: 240px;
+    }
+
+
 
     
 }
@@ -841,7 +922,15 @@ nav {
 @media screen and (max-width: 1440px) and (min-width: 988px) {
 
     .Experience-container, .education-container, .portfolio-section {
-        padding: 40px 200px;
+        padding: 40px 120px;
+    }
+
+    .companies {
+        gap: 48px;
+    }
+
+    .progress-container {
+        width: 300px;
     }
 
 }
@@ -1000,6 +1089,10 @@ nav {
         display: none
     }
 
+    .progress-container {
+        width: 280px;
+    }
+
 
 
 
@@ -1009,6 +1102,7 @@ nav {
     .site-developed {
         min-width: 100px;
         max-width: 300px;
+        opacity: 80%;
     }
 
 
@@ -1089,6 +1183,7 @@ nav {
     .education-skills {
         display: flex;
         flex-direction: column;
+        gap: 32px;
     }
 
     .education-container {
