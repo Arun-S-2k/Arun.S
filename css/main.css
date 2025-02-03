@@ -3,7 +3,6 @@ body {
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding-bottom: 300px;
     align-items: center;
     gap: 20px;
     font-family: 'inter'
@@ -15,7 +14,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 }
 
 
@@ -225,6 +224,7 @@ main {
 .approach {
     padding-top: 100px;
     padding-bottom: 100px;
+    display: none;
 }
 
 .approach-logo img {
@@ -449,9 +449,15 @@ main {
     min-width: 500px;
 }
 
+.site-developed p {
+    padding: 0%;
+    margin-top: 8px;
+}
+
 .Coding-skill {
     align-items: center; /* Vertically align the items */
     gap: 16px; /* Add space between images and text */
+    margin-top: 16px;
 }
 
 
@@ -624,17 +630,22 @@ nav {
 }
 
 .education-container {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+
+    display: flex;  /* Make it a flex container */
+    flex-direction: column; /* Arrange items vertically */
+    width: 100vw;
     padding: 40px 300px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    gap: 44px; /* Now gap will work */
+    overflow: visible;
 }
 
 .educations {
     display: flex;
     flex-direction: column;  /* Stack items vertically */
     justify-content: space-between;
-    padding: 20px 0px 20px 0px;
+    padding: 0px;
 }
 
 .college {
@@ -656,9 +667,9 @@ nav {
 .college h4 {
     color: var(--Cinder, green);
     font-family: Inter;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 00;
+    font-weight: 500;
     line-height: normal;
 }
 
@@ -685,14 +696,15 @@ nav {
 .education-text p {
     padding: 0;
     margin: 0;
-    display: flex;
+    display: none;
     width: 100%; /* Makes the <p> element take the full width of its parent */
 }
 
 .skills {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
+    margin-bottom: 32px;
 }
 
 .skill {
@@ -701,11 +713,17 @@ nav {
     gap: 8px;
 } 
 
+.aditional-skills h3,
+.aditional-skills p {
+    padding: 0;
+    margin: 0;
+}
+
 .skill-progress {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 32px;
+
 }
 
 
@@ -732,9 +750,42 @@ nav {
 
 
 
+
+.social-bottom {
+    display: flex;
+    gap: 30px;
+    color: #656D72;
+    opacity: 60%;
+    align-items: center;
+}
+
+.footer {
+    width: 100%;
+    background-color: #FBFBFB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.mail-id {
+    display: flex;
+    gap: 8px;
+    color: #656D72;
+    font-size: 20px;
+}
+
+.mail-logo {
+    width: 28px;
+}
+
+
+
+
+
 @media screen and (max-width: 989px) and (min-width: 426px) {
     body {
-        padding: 40px 60px;
         flex-direction: column;
         align-items: center;
         gap: 80px;
@@ -756,7 +807,7 @@ nav {
         display: none; /* Hide the navigation */
     }
 
-    .Experience-container {
+    .Experience-container, .education-container, .portfolio-section {
         padding: 40px 100px;
     }
 
@@ -764,13 +815,39 @@ nav {
         gap: 40px;
     }
 
+    .educations {
+        display: flex;
+        gap: 32px;
+    }
+
     .Primary-CTA:active {
         box-shadow: none !important; /* Removes persistent shadow */
         transform: none !important; /* Keeps the button at its normal size after clicking */
     }
 
+    .education-skills {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        padding: 24px;
+    }
+
+
     
 }
+
+@media screen and (max-width: 1440px) and (min-width: 988px) {
+
+    .Experience-container, .education-container, .portfolio-section {
+        padding: 40px 200px;
+    }
+
+}
+
+
+
 
 
 @media screen and (max-width: 425px) {
@@ -825,6 +902,7 @@ nav {
     .approach {
         padding-top: 30px;
         padding-bottom: 30px;
+        display: none;
     }
     
     .approach-logo img {
@@ -902,6 +980,10 @@ nav {
         height: auto;
     }
 
+    .portfolio-item:hover {
+        transform: none;
+    }
+    
     .portfolio-item h4 {
         font-size: 16px;
     }
@@ -925,7 +1007,8 @@ nav {
 
 
     .site-developed {
-        min-width: 200px;
+        min-width: 100px;
+        max-width: 300px;
     }
 
 
@@ -998,6 +1081,11 @@ nav {
         gap: 24px;
     }
 
+    .educations {
+        display: flex;
+        gap: 36px;
+    }
+
     .education-skills {
         display: flex;
         flex-direction: column;
@@ -1008,7 +1096,7 @@ nav {
     }
 
     .education-text p {
-        display: block; /* Change flex to block to fill container naturally */
+        display: none;
         width: 100%; /* Ensures the element takes up full width of its container */
         max-width: 370px;
         margin: 0; /* Reset any default margins if necessary */
@@ -1022,6 +1110,23 @@ nav {
         display: flex;
         flex-direction: column;
         gap: 24px;
+    }
+
+    .social-bottom {
+        display: flex;
+        gap: 30px;
+        color: #656D72;
+        opacity: 60%;
+        align-items: center;
+    }
+    
+    
+    .mail-id {
+        font-size: 16px;
+    }
+    
+    .mail-logo {
+        width: 24px;
     }
 
 }
