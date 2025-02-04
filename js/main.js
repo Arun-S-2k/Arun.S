@@ -66,6 +66,7 @@ function updateScrollBehavior() {
     };
 }
 
+
 // Run function initially
 updateScrollBehavior();
 
