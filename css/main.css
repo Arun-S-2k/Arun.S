@@ -3,6 +3,7 @@ body {
     display: flex;
     width: 100%;
     flex-direction: column;
+    overflow-x: hidden;
     align-items: center;
     gap: 20px;
     overflow-x: hidden;
@@ -14,8 +15,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
     gap: 80px;
     margin-bottom: 120px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -975,10 +983,15 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow-x: hidden;
         gap: 32px;
         font-family: 'Inter', sans-serif;
         width: 100%; /* Remove fixed width, use full available width */
         height: 100%; /* Adjust body height to be responsive */
+    }
+
+    .wrap {
+        overflow-x: hidden;
     }
 
     main {
