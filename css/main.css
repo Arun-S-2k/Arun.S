@@ -396,6 +396,10 @@ main {
     box-sizing: border-box; /* Include padding in width and height calculation */
 }
 
+.portfolio-section-2 {
+    display: none;
+}
+
 .portfolio-container {
     display: flex;
     flex-direction: column;
@@ -631,10 +635,12 @@ main {
 
 .designations h2 {
     margin-bottom: 8px; /* Space between the title and next section */
+    line-height: normal;
 }
 
 .designations p {
     margin-bottom: 8px; /* Space between paragraphs */
+    line-height: normal;
 }
 
 .designations .discription {
@@ -647,6 +653,12 @@ main {
 
 .designations .tools {
     margin-top: 16px;
+}
+
+.designation-title {
+    display: flex;  
+    flex-direction: column;
+    gap: 8px; /* Adjust gap as needed */
 }
 
 .companies {
@@ -666,7 +678,7 @@ main {
     flex-direction: column; /* Align designation details in a row */
     line-height: 2%;
     text-align: left;
-    gap: 24px;
+    gap: 16px;
     min-width: 300px;
 }
 
@@ -675,6 +687,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 16px;
     background: var(--White, #FBFBFB);
     border: none;
     font-family: Inter;
@@ -693,6 +706,7 @@ main {
 }
 
 .companies button.active {
+    padding-left: 16px;
     background-color: #ffffff;
     color: #E76F00;
     border-bottom: 1px solid #E76F00;
@@ -725,7 +739,7 @@ nav {
     line-height: 24px; /* 200% */
     letter-spacing: 7.5px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
 }
 
 .education-container {
@@ -744,6 +758,7 @@ nav {
 .white-container-bg {
     width: 100vw;
     display: flex; /* Makes it a flex container */
+    flex-direction: column;
     justify-content: center; /* Centers the child container */
     align-items: center;
 }
@@ -826,8 +841,13 @@ nav {
     gap: 8px;
 } 
 
+.aditional-skills h3 {
+    font-weight: 400;
+}
+
 .aditional-skills h3,
 .aditional-skills p {
+
     padding: 0;
     margin: 0;
 }
@@ -1053,6 +1073,13 @@ nav {
         padding-bottom: 20px;
     }
     
+
+
+
+    .path {
+    
+        letter-spacing: 5.5px;
+    }
 
     
 
