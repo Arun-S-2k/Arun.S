@@ -42,10 +42,6 @@ function initCompanyButtons() {
 
 
 
-
-
-
-
 const slider = document.querySelector(".portfolio-slider");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
