@@ -1,27 +1,38 @@
 {
-    "company1": {
-      "title": "UI UX Designer",
-      "location": "Chennai, INDIA",
-      "period": "Apr 2023 - Present · Full-time",
-      "tools": ["Figma", "Adobe"],
-      "description": [
-        "Developed a telematics website with real-time data visualization for VCUs and BMS.",
-        "Built a service center app for tracking after-sales service records.",
-        "Designed mobile apps for electric vehicle battery swap station management.",
-        "Redesigned an ERP platform for inventory, CRM, and sales chain operations.",
-        "Created a customer mobile app for vehicle performance monitoring and management.",
-        "Designed screens for vehicle instrument clusters to enhance user interface and experience."
-      ]
-    },
-    "company2": {
-      "title": "Junior UI UX Designer",
-      "location": "Chennai, INDIA",
-      "period": "Aug 2022 - Mar 2023 · Full-time",
-      "tools": ["Figma", "Adobe"],
-      "description": [
-        "Designed a fintech product with multiple payment flows, integrating 20+ BBPS services, UPI, ad-hoc payments, recurring payments, and an autopay system during its emerging phase.",
-        "Handled the entire design process—from conceptualization and user research to information architecture, wireframing, prototyping, and crafting intuitive, visually appealing user interfaces for both mobile and web."
-      ]
-    }
+  "company2": {
+    "title": "UI UX Designer",
+    "location": "Chennai, INDIA",
+    "period": "Apr 2023 - Mar 2025 · Full-time",
+    "tools": ["Figma", "Adobe"],
+    "description": [
+      "Developed a telematics website with real-time data visualization for VCUs and BMS.",
+      "Built a service center app for tracking after-sales service records.",
+      "Designed mobile apps for electric vehicle battery swap station management.",
+      "Redesigned an ERP platform for inventory, CRM, and sales chain operations.",
+      "Created a customer mobile app for vehicle performance monitoring and management.",
+      "Designed screens for vehicle instrument clusters to enhance user interface and experience."
+    ]
+  },
+  "company3": {
+    "title": "Junior UI UX Designer",
+    "location": "Chennai, INDIA",
+    "period": "Aug 2022 - Apr 2023 · Intern to Full-time",
+    "tools": ["Figma", "Adobe"],
+    "description": [
+      "Designed a fintech product with multiple payment flows, integrating 20+ BBPS services, UPI, ad-hoc payments, recurring payments, and an autopay system during its emerging phase.",
+      "Handled the entire design process—from conceptualization and user research to information architecture, wireframing, prototyping, and crafting intuitive, visually appealing user interfaces for both mobile and web."
+    ]
+  },
+  "company1": {
+    "title": "UI UX Designer",
+    "location": "Chennai, INDIA",
+    "period": "Mar 2025 - Present · Full-time",
+    "tools": ["Figma", "Adobe", "Sketch"],
+    "description": [
+      "Designed a comprehensive digital KYC, ReKYC, and onboarding solution for non-individuals, transforming a manual, paper-based process.",
+      "Managed multiple entity types with unique flows and document requirements, integrating AI-powered data extraction, auto-population, and full compliance.",
+      "Delivered a user-friendly, research-driven platform built from scratch, introducing a new fintech Non-Individual KYC concept.",
+      "Leveraged AI-driven design and no-code development, empowered by prompt engineering, to accelerate the platform design and delivery process."
+    ]
   }
-  
+}
